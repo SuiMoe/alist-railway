@@ -4,6 +4,7 @@ cat >/opt/alist/data/config.json <<EOF
 {
   "address": "0.0.0.0",
   "port": 5244,
+  "assets": "https://alist-ipc.4everland.app/dist/",
   "database": {
     "type": "$DB_TYPE",
     "user": "$MYSQLUSER",
