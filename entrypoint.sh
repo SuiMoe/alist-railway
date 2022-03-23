@@ -4,7 +4,7 @@ cat >/opt/alist/data/config.json <<EOF
 {
   "address": "0.0.0.0",
   "port": 5244,
-  "assets": "https://cdn.smoe.top/alist-ipc@latest/",
+  "assets": "https://npm.elemecdn.com/alist-ipc@latest/",
   "database": {
     "type": "$DB_TYPE",
     "user": "$MYSQLUSER",
