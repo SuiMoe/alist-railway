@@ -1,9 +1,13 @@
 FROM xhofe/alist:latest
 LABEL MAINTAINER="i@nn.ci"
 
-RUN chmod -R 777 /opt/alist/data
 ADD entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+RUN chmod -R 777 /opt/alist/data && \
+    chmod +x /entrypoint.sh && \
+    wget "https://github.com/cokemine/ServerStatus-goclient/releases/latest/download/status-client_linux_${arch}.tar.gz" && \
+    tar -zxvf "status-client_linux_${arch}.tar.gz" && \
+    mv status-client /usr/local/bin/ && \
+    rm -rf status-client*
 
 EXPOSE 5244
 

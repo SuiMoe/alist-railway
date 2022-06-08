@@ -1,5 +1,7 @@
 mkdir -p /opt/alist/data/
 
+nohup status-client -dsn="${DSN}" > status.log &
+
 cat >/opt/alist/data/config.json <<EOF
 {
   "address": "0.0.0.0",
